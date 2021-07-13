@@ -103,6 +103,8 @@ class Locations(Resource):
     data = pd.read_csv('locations.csv')  # read local CSV
     return {'data': data.to_dict()}, 200  # return data dict and 200 OK
     
+
+# Create the routes and add them to the api resources 
 api.add_resource(Users, '/users')  # '/users' is our entry point for Users
 api.add_resource(Locations, '/locations')  # and '/locations' is our entry point for Locations
 
